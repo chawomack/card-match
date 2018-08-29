@@ -1,0 +1,66 @@
+
+$color1: rgba(246, 189, 96, 1);
+$color2: rgba(247, 237, 226, 1);
+$color3: rgba(245, 202, 195, 1);
+$color4: rgba(132, 165, 157, 1);
+$color5: rgba(242, 132, 130, 1);
+$gutter: 16px;
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(5vh, 1fr));
+  justify-content: center;
+  grid-row-gap: $gutter;
+  grid-column-gap: $gutter;
+  margin: 5vh 10vw;
+  grid-auto-rows: minmax(15vh, 20vh);
+}
+
+.Card {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 4px solid $color3;
+  background: $color2;
+  color: darken($color4, 10%);
+  border-radius: 5px;
+  height: 100%;
+  box-shadow:  1px 2px 3px 2px rgba(0, 0, 0, .1);
+  position: relative;
+  .word {
+    display: none;
+    font-size: 3vw;
+    font-weight: 900;
+    text-align: center;
+    transform: rotateY(-180deg);
+    flex: 1;
+  }
+  .emoji {
+    font-size: 3.5em;
+    text-align: center;
+     flex: 1;
+  }
+}
+
+.flipped {
+  .word {
+    display: block;
+  }
+  .emoji {
+    display: none;
+  }
+}
+
+#star {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  fill: $color1;
+  opacity: 0;
+}
+
+@media screen {
+
+}
